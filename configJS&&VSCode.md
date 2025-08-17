@@ -61,7 +61,11 @@ Escreva o restante do seu código normalmente.
 
 Para rodar o programa, use no terminal:
 
-`node .` 📌 Não esqueça de colocar o ponto (.)
+`node .` 📌 Esse comando roda automaticamente o arquivo `index.js` (ou o definido como principal no `package.json`).
+
+Caso tenha mais de um arquivo na pasta (ex.: `app.js`, `teste.js`, etc.), você deve indicar exatamente qual arquivo deseja executar:
+
+`node nomeDoSeuArquivo.js`
 
 ⚠️ Para evitar erros de execução em um código recentemente alterado, ative o salvamento automático no VS Code: 
 `Arquivo → Salvamento Automático`
@@ -75,7 +79,7 @@ Para rodar o programa, use no terminal:
 | **UnauthorizedAccess / PSSecurityException** | PowerShell bloqueia scripts (`npm.ps1`).                                     | Rodar `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`.                                 |
 | **Executar no painel errado**                | Tentou rodar o comando no **Painel de Saída** ao invés do **Terminal**.      | Abrir o **Terminal** (Ctrl+Shift+\`).                                                               |
 | **MODULE\_NOT\_FOUND**                       | Esqueceu de instalar ou importar um módulo.                                  | Verificar se rodou `npm install nome-do-modulo` e se incluiu `require('nome-do-modulo')` no código. |
-| **Erro ao rodar `node .`**                   | O arquivo principal não é `index.js` ou não está definido no `package.json`. | Rodar `node nomeDoArquivo.js` diretamente.                                                          |
+| **Erro ao rodar `node .`**                   | O arquivo principal não é `index.js` ou não está definido no `package.json`. | Rodar `node nomeDoArquivo.js` diretamente (útil quando há vários arquivos na pasta).                                                          |
 
 ---
 
